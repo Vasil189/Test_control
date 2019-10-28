@@ -1,0 +1,52 @@
+#include <iostream>
+#include <iomanip>
+#include <conio.h>
+using namespace std;
+int main()
+{
+
+	setlocale(0, "");
+	
+	char r;
+	int s;
+	cout << endl;
+	cout << "Введите количество строк : " ;
+	cin >> s;
+	cout << endl;
+	
+	for (int i = 0; i < s; i++)
+	{
+		cout << setw(s - i) << ' ';
+		for (int j = 0; j <= i; j++)
+			cout << "*";
+		cout << endl;
+	}
+
+    cout << endl << endl;
+
+	
+
+	 cout << "Продолжить (y/n) ? ";
+												 
+	 cin >> r;
+
+	if (r == 'y')
+	{
+		return main();
+		
+	}
+	else if (r == 'n')
+	{
+		exit(0);
+	}
+	else
+	{
+		cout << "Ошибка!";
+
+	}
+
+	cout << endl;
+
+	system("pause");
+	return 0;
+}
